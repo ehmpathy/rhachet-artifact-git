@@ -95,9 +95,7 @@ you can ask to retain each version of the file too
 
 ```ts
 const artifact = genArtifactGitFile(ref, {
-  versions: {
-    retain: true,
-  },
+  versions true,
 });
 
 await artifact.set({ content: 'v1' });
