@@ -150,7 +150,7 @@ describe('genArtifactGitFile (integration)', () => {
     const versionDir = (() => {
       const dirname = path.dirname(ref.uri);
       const fileKey = path.basename(ref.uri, path.extname(ref.uri));
-      return join(dirname, '.rhachet/artifact', fileKey);
+      return join(dirname, '.rhachet', fileKey);
     })();
 
     afterAll(async () => {
@@ -168,7 +168,7 @@ describe('genArtifactGitFile (integration)', () => {
     then('artifact.set() writes both main and versioned copy', async () => {
       const artifact = genArtifactGitFile(ref, {
         versions: {
-          retain: './.rhachet/artifact/{key}/{unidatetime}.{hash}.{ext}',
+          retain: './.rhachet/{key}/{unidatetime}.{hash}.{ext}',
         },
       });
 
@@ -195,7 +195,7 @@ describe('genArtifactGitFile (integration)', () => {
     const versionDir = (() => {
       const dirname = path.dirname(ref.uri);
       const fileKey = path.basename(ref.uri, path.extname(ref.uri));
-      return join(dirname, '.rhachet/artifact', fileKey);
+      return join(dirname, '.rhachet', fileKey);
     })();
 
     afterAll(async () => {

@@ -16,7 +16,7 @@ import { gitFileSet } from './gitFileSet';
 export class ArtifactAccessDeniedError extends HelpfulError {}
 
 const VERSION_ROUTE_STANDARD =
-  './.rhachet/artifact/{key}/{unidatetime}.{hash}.{ext}' as const;
+  './.rhachet/{key}/{unidatetime}.{hash}.{ext}' as const;
 
 /**
  * .what = generates a GitFile-backed Artifact
@@ -72,6 +72,7 @@ export const genArtifactGitFile = (
                   uri: path.join(
                     path.dirname(uri),
                     setVersionRoute
+                      .replace('.rhachet/.rhachet/', '.rhachet/') // for nested scenarios (e.g., metafile w/ versions, we'll flatten it)
                       .replace('{key}', fileKey)
                       .replace('{unidatetime}', asUniDateTime(new Date()))
                       .replace(
