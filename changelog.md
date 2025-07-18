@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/ehmpathy/rhachet-artifact-git/compare/v1.0.1...v1.0.2) (2025-07-18)
+
+
+### Bug Fixes
+
+* **readme:** copypasta on usage example ([a565b20](https://github.com/ehmpathy/rhachet-artifact-git/commit/a565b203c660d14a3e6512f5fbc1afb58c23435d))
+* **version:** flatten artifact version directory ([4de9a8c](https://github.com/ehmpathy/rhachet-artifact-git/commit/4de9a8c6e02ea13bf825e9ddd9fa00cefe9ae5d4))
+
 ## [1.0.1](https://github.com/ehmpathy/rhachet-artifact-git/compare/v1.0.0...v1.0.1) (2025-07-14)
 
 
