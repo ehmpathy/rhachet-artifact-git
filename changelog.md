@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ehmpathy/rhachet-artifact-git/compare/v1.0.2...v1.1.0) (2025-08-12)
+
+
+### Features
+
+* **dir:** get artifact observability dir ([1996e9b](https://github.com/ehmpathy/rhachet-artifact-git/commit/1996e9bde4a8fc3eefa63967b79b8d86d662b9c9))
+
 ## [1.0.2](https://github.com/ehmpathy/rhachet-artifact-git/compare/v1.0.1...v1.0.2) (2025-07-18)
 
 
