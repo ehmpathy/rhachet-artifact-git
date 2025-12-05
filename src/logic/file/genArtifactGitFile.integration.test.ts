@@ -8,6 +8,26 @@ import { given, then, when } from 'test-fns';
 import { GitFile } from '../../domain/GitFile';
 import { genArtifactGitFile } from './genArtifactGitFile';
 
+/**
+ * type test: verify that TContent generic flows through correctly
+ *
+ * the artifact.get() should return GitFile<string>, not GitFile<unknown>
+ */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const _typeTest = async () => {
+  const artifact = genArtifactGitFile({ uri: 'test' });
+  const got = await artifact.get();
+  if (!got) return;
+
+  // @ts-expect-error - content should be string, not number
+  const _contentAsNumber: number = got.content;
+
+  // content should be string - if this errors, TContent generic is not flowing through
+  const _contentAsString: string = got.content;
+
+  return { _contentAsNumber, _contentAsString };
+};
+
 describe('genArtifactGitFile (integration)', () => {
   given('a local file ref with initial content', () => {
     const tmpUri = join(tmpdir(), `artifact-${Date.now()}.txt`);
