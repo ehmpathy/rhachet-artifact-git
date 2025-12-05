@@ -4,9 +4,9 @@ import { readFile } from 'fs/promises';
 
 import { GitFile } from '../../domain/GitFile';
 
-export const gitFileGetLocal = async (input: {
+export const gitFileGetLocal = async <TContent = string>(input: {
   ref: RefByUnique<typeof GitFile>;
-}): Promise<GitFile | null> => {
+}): Promise<GitFile<TContent> | null> => {
   try {
     // Attempt to read the file as UTF-8 text. This assumes TContent = string by default.
     const content = await readFile(input.ref.uri, 'utf-8');

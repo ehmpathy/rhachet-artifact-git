@@ -9,13 +9,14 @@ import { resolve } from 'path';
 export const getGitRepoRoot = async (input: {
   from: string;
 }): Promise<string> => {
-  const gitDir = await findUp('.git', {
-    type: 'directory',
-    cwd: input.from,
-  });
+  const [gitDir, gitFile] = await Promise.all([
+    findUp('.git', { cwd: input.from, type: 'directory' }), // standard repo: .git is a directory
+    findUp('.git', { cwd: input.from, type: 'file' }), // worktree: .git is a file pointing to the main repo
+  ]);
+  const gitPath = gitDir ?? gitFile;
 
-  if (!gitDir)
+  if (!gitPath)
     throw new BadRequestError('Not inside a Git repository', { input });
 
-  return resolve(gitDir, '..');
+  return resolve(gitPath, '..');
 };

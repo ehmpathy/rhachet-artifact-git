@@ -4,7 +4,7 @@ import { DomainEntity } from 'domain-objects';
  * .what = a git accessible file that may be stored locally or in the cloud
  * .why = represents a unit of code, config, or content to be accessed or modified during a weave
  */
-export interface GitFile {
+export interface GitFile<TContent = string> {
   /**
    * .what = the file path or identifier
    * .why = uniquely locates the file within its host (e.g., absolute path or cloud key)
@@ -21,9 +21,12 @@ export interface GitFile {
    * .what = the content of the file
    * .why = enables manipulation, transformation, or review of the file's actual body
    */
-  content: string; // todo: support non strings
+  content: TContent;
 }
-export class GitFile extends DomainEntity<GitFile> implements GitFile {
+export class GitFile<TContent = string>
+  extends DomainEntity<GitFile>
+  implements GitFile<TContent>
+{
   public static primary = ['uri'] as const;
   public static unique = ['uri'] as const;
 }
