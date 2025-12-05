@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/ehmpathy/rhachet-artifact-git/compare/v1.1.1...v1.1.2) (2025-12-05)
+
+
+### Bug Fixes
+
+* **practs:** bump best practs ([#8](https://github.com/ehmpathy/rhachet-artifact-git/issues/8)) ([f11a4c0](https://github.com/ehmpathy/rhachet-artifact-git/commit/f11a4c0252e7739227394a843abce6c47748bc2a))
+
 ## [1.1.1](https://github.com/ehmpathy/rhachet-artifact-git/compare/v1.1.0...v1.1.1) (2025-12-05)
 
 
