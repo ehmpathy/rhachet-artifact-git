@@ -1,5 +1,5 @@
 import { createHash } from 'crypto';
-import { RefByUnique } from 'domain-objects';
+import type { RefByUnique } from 'domain-objects';
 import { readFile } from 'fs/promises';
 
 import { GitFile } from '../../domain/GitFile';

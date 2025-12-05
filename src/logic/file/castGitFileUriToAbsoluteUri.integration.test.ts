@@ -1,5 +1,5 @@
 import { resolve } from 'path';
-import { given, when, then } from 'test-fns';
+import { given, then, when } from 'test-fns';
 
 import { castGitFileUriToAbsoluteUri } from './castGitFileUriToAbsoluteUri';
 

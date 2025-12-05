@@ -1,4 +1,4 @@
-import { getRef } from 'domain-objects';
+import { refByUnique } from 'domain-objects';
 import { tmpdir } from 'os';
 import { join } from 'path';
 import { given, then } from 'test-fns';
@@ -26,10 +26,10 @@ describe('gitFileGet', () => {
     });
 
     then('it should delegate to gitFileGetLocal with the ref', async () => {
-      const result = await gitFileGet({ ref: getRef(mockResult) });
+      const result = await gitFileGet({ ref: refByUnique(mockResult) });
 
       expect(gitFileGetLocalModule.gitFileGetLocal).toHaveBeenCalledWith({
-        ref: { _dobj: 'GitFile', uri: tmpUrl },
+        ref: { uri: tmpUrl },
       });
       expect(result).toBe(mockResult);
     });

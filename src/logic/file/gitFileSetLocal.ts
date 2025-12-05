@@ -1,9 +1,9 @@
-import { RefByUnique } from 'domain-objects';
+import type { RefByUnique } from 'domain-objects';
 import { mkdir, writeFile } from 'fs/promises';
 import { UnexpectedCodePathError } from 'helpful-errors';
 import { dirname } from 'path';
 
-import { GitFile } from '../../domain/GitFile';
+import type { GitFile } from '../../domain/GitFile';
 import { gitFileGetLocal } from './gitFileGetLocal';
 
 /**
