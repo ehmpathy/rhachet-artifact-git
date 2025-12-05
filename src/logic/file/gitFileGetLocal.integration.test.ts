@@ -1,4 +1,4 @@
-import { writeFile, unlink } from 'fs/promises';
+import { unlink, writeFile } from 'fs/promises';
 import { tmpdir } from 'os';
 import { join } from 'path';
 import { given, then } from 'test-fns';

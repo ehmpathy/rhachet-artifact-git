@@ -1,13 +1,13 @@
 import { asUniDateTime } from '@ehmpathy/uni-time';
 import { withExpectOutput } from 'as-procedure';
-import { RefByUnique } from 'domain-objects';
+import type { RefByUnique } from 'domain-objects';
 import { asHashShake256 } from 'hash-fns';
 import { HelpfulError, UnexpectedCodePathError } from 'helpful-errors';
 import path from 'path';
 import { Artifact } from 'rhachet-artifact';
-import { isPresent, PickOne } from 'type-fns';
+import { isPresent, type PickOne } from 'type-fns';
 
-import { GitFile } from '../../domain/GitFile';
+import type { GitFile } from '../../domain/GitFile';
 import { castGitFileUriToAbsoluteUri } from './castGitFileUriToAbsoluteUri';
 import { gitFileDel } from './gitFileDel';
 import { gitFileGet } from './gitFileGet';
@@ -62,7 +62,7 @@ export const genArtifactGitFile = (
       const setVersionRoute =
         options?.versions === true
           ? VERSION_ROUTE_STANDARD
-          : options?.versions?.retain ?? null;
+          : (options?.versions?.retain ?? null);
       const [setLatestResult] = await Promise.all(
         [
           gitFileSet({ ref: { uri }, content }),

@@ -1,7 +1,7 @@
 import { DomainEntity } from 'domain-objects';
 
-import { GitCommit } from './GitCommit';
-import { GitFileVersionRef } from './GitFile';
+import type { GitCommit } from './GitCommit';
+import type { GitFileVersionRef } from './GitFile';
 
 export interface GitRepo {
   /**

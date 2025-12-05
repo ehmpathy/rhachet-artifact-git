@@ -2,7 +2,7 @@ import { execSync } from 'child_process';
 import { existsSync, mkdirSync, rmSync, writeFileSync } from 'fs';
 import { tmpdir } from 'os';
 import { join, resolve } from 'path';
-import { given, when, then } from 'test-fns';
+import { given, then, when } from 'test-fns';
 
 import { getGitRepoRoot } from './getGitRepoRoot';
 
