@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/ehmpathy/rhachet-artifact-git/compare/v1.1.0...v1.1.1) (2025-12-05)
+
+
+### Bug Fixes
+
+* **gitrepo:** getGitRepoRoot should support worktrees ([dfe2ff9](https://github.com/ehmpathy/rhachet-artifact-git/commit/dfe2ff945e149d8b94b56a05261f7bbcec7ac5e4))
+
 ## [1.1.0](https://github.com/ehmpathy/rhachet-artifact-git/compare/v1.0.2...v1.1.0) (2025-08-12)
 
 
