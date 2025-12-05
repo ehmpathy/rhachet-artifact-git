@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/ehmpathy/rhachet-artifact-git/compare/v1.1.2...v1.1.3) (2025-12-05)
+
+
+### Bug Fixes
+
+* **deps:** bump rhachet-artifacts for generics flowthrough ([#10](https://github.com/ehmpathy/rhachet-artifact-git/issues/10)) ([7b53355](https://github.com/ehmpathy/rhachet-artifact-git/commit/7b5335546e8fd7779fd2ab8517becdd3f982938f))
+
 ## [1.1.2](https://github.com/ehmpathy/rhachet-artifact-git/compare/v1.1.1...v1.1.2) (2025-12-05)
 
 
