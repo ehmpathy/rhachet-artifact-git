@@ -2,7 +2,7 @@ import type { RefByUnique } from 'domain-objects';
 import { unlink } from 'fs/promises';
 import { UnexpectedCodePathError } from 'helpful-errors';
 
-import type { GitFile } from '../../domain/GitFile';
+import type { GitFile } from '@src/domain.objects/GitFile';
 
 /**
  * .what = deletes a GitFile from the local filesystem

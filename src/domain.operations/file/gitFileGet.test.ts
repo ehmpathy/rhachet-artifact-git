@@ -3,7 +3,8 @@ import { tmpdir } from 'os';
 import { join } from 'path';
 import { given, then } from 'test-fns';
 
-import { GitFile } from '../../domain/GitFile';
+import { GitFile } from '@src/domain.objects/GitFile';
+
 import { gitFileGet } from './gitFileGet';
 import * as gitFileGetLocalModule from './gitFileGetLocal';
 

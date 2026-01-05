@@ -7,7 +7,8 @@ import path from 'path';
 import { Artifact } from 'rhachet-artifact';
 import { isPresent, type PickOne } from 'type-fns';
 
-import type { GitFile } from '../../domain/GitFile';
+import type { GitFile } from '@src/domain.objects/GitFile';
+
 import { castGitFileUriToAbsoluteUri } from './castGitFileUriToAbsoluteUri';
 import { gitFileDel } from './gitFileDel';
 import { gitFileGet } from './gitFileGet';

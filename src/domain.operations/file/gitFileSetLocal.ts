@@ -3,7 +3,8 @@ import { mkdir, writeFile } from 'fs/promises';
 import { UnexpectedCodePathError } from 'helpful-errors';
 import { dirname } from 'path';
 
-import type { GitFile } from '../../domain/GitFile';
+import type { GitFile } from '@src/domain.objects/GitFile';
+
 import { gitFileGetLocal } from './gitFileGetLocal';
 
 /**

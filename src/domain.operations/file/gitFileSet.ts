@@ -1,7 +1,8 @@
 import type { RefByUnique } from 'domain-objects';
 import { UnexpectedCodePathError } from 'helpful-errors';
 
-import type { GitFile } from '../../domain/GitFile';
+import type { GitFile } from '@src/domain.objects/GitFile';
+
 import { gitFileSetLocal } from './gitFileSetLocal';
 
 /**
