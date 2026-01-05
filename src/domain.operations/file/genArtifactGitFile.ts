@@ -1,8 +1,8 @@
-import { asUniDateTime } from '@ehmpathy/uni-time';
 import { withExpectOutput } from 'as-procedure';
 import type { RefByUnique } from 'domain-objects';
 import { asHashShake256 } from 'hash-fns';
 import { HelpfulError, UnexpectedCodePathError } from 'helpful-errors';
+import { asIsoTimeStamp } from 'iso-time';
 import path from 'path';
 import { Artifact } from 'rhachet-artifact';
 import { isPresent, type PickOne } from 'type-fns';
@@ -75,7 +75,7 @@ export const genArtifactGitFile = (
                     setVersionRoute
                       .replace('.rhachet/.rhachet/', '.rhachet/') // for nested scenarios (e.g., metafile w/ versions, we'll flatten it)
                       .replace('{key}', fileKey)
-                      .replace('{unidatetime}', asUniDateTime(new Date()))
+                      .replace('{unidatetime}', asIsoTimeStamp(new Date()))
                       .replace(
                         '{hash}',
                         await asHashShake256(content, { bytes: 8 }), // for easy grokability of like contents
