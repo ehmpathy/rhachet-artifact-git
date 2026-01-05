@@ -1,7 +1,7 @@
 import { BadRequestError, UnexpectedCodePathError } from 'helpful-errors';
 import { resolve } from 'path';
 
-import { getGitRepoRoot } from '../repo/getGitRepoRoot';
+import { getGitRepoRoot } from '@src/domain.operations/repo/getGitRepoRoot';
 
 /**
  * .what = casts a git file uri to absolute uri

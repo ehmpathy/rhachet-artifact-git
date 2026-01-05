@@ -5,7 +5,8 @@ import path, { join } from 'path';
 import { asSerialJSON } from 'serde-fns';
 import { given, then, when } from 'test-fns';
 
-import { GitFile } from '../../domain/GitFile';
+import { GitFile } from '@src/domain.objects/GitFile';
+
 import { genArtifactGitFile } from './genArtifactGitFile';
 
 /**

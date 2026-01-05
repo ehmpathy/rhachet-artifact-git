@@ -2,7 +2,7 @@ import { createHash } from 'crypto';
 import type { RefByUnique } from 'domain-objects';
 import { readFile } from 'fs/promises';
 
-import { GitFile } from '../../domain/GitFile';
+import { GitFile } from '@src/domain.objects/GitFile';
 
 export const gitFileGetLocal = async <TContent = string>(input: {
   ref: RefByUnique<typeof GitFile>;

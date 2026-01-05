@@ -1,5 +1,4 @@
-export { GitFile } from '../domain/GitFile';
-export { genArtifactGitFile } from '../logic/file/genArtifactGitFile';
-export { getArtifactObsDir } from '../logic/file/getArtifactObsDir';
-
-export { getGitRepoRoot } from '../logic/repo/getGitRepoRoot';
+export { GitFile } from '@src/domain.objects/GitFile';
+export { genArtifactGitFile } from '@src/domain.operations/file/genArtifactGitFile';
+export { getArtifactObsDir } from '@src/domain.operations/file/getArtifactObsDir';
+export { getGitRepoRoot } from '@src/domain.operations/repo/getGitRepoRoot';
