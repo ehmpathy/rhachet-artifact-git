@@ -52,7 +52,7 @@ export const genArtifactGitFile = (
     ),
     set: async ({ content }) => {
       if (access === 'readonly')
-        ArtifactAccessDeniedError.throw(
+        throw new ArtifactAccessDeniedError(
           `artifact.access=readonly, can not .set`,
           { ref },
         );
@@ -98,7 +98,7 @@ export const genArtifactGitFile = (
     },
     del: async () => {
       if (access === 'readonly')
-        ArtifactAccessDeniedError.throw(
+        throw new ArtifactAccessDeniedError(
           `artifact.access=readonly, can not .del`,
           { ref },
         );
