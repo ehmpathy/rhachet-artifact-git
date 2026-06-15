@@ -1,4 +1,3 @@
-import { refByUnique } from 'domain-objects';
 import { tmpdir } from 'os';
 import { join } from 'path';
 import { given, then } from 'test-fns';
@@ -30,7 +29,7 @@ describe('gitFileSet', () => {
       'it should delegate to gitFileSetLocal with the ref and content',
       async () => {
         const result = await gitFileSet({
-          ref: refByUnique(mockResult),
+          ref: { uri: tmpUrl },
           content: mockResult.content,
         });
 
